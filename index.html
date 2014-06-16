@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script src="bower_components/jquery/jquery.min.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
+    <script src="js/task_model.js"></script>
+    <script src="js/list_collection.js"></script>
+    <script src="js/list_view.js"></script>
+    <script src="js/task_view.js"></script>
+    <script>
+      $(function(){
+        var task = new Task({name: 'laundry'});
+        var task2 = new Task({name: 'get package'});
+
+        var list = new List([task, task2]);
+
+        var listview = new ListView({collection: list});
+        $('body').append(listview.render());
+      });
+    </script>
+  </body>
+</html>
