@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
   <body>
+    <header>
+      <h1>Todo List</h1>
+    </header>
+
+    <footer>
+    </footer>
     <script src="bower_components/jquery/jquery.min.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
     <script src="bower_components/backbone/backbone.js"></script>
@@ -8,15 +14,15 @@
     <script src="js/list_collection.js"></script>
     <script src="js/list_view.js"></script>
     <script src="js/task_view.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/app_view.js"></script>
+    <script src="tasks.json"></script>
     <script>
       $(function(){
-        var task = new Task({name: 'laundry'});
-        var task2 = new Task({name: 'get package'});
-
-        var list = new List([task, task2]);
-
-        var listview = new ListView({collection: list});
-        $('body').append(listview.render());
+        var app = new App({});
+        var appview = new AppView({model: app});
+        $('body').append(appview.render());
+        app.set({list: new List([{name: 'get a job'}])});
       });
     </script>
   </body>
