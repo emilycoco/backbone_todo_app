@@ -10,7 +10,8 @@ var AppView = Backbone.View.extend({
 
 
   events: {
-    'click #add-task' : 'addTask'
+    'click #add-task' : 'addTask',
+    'click li' : 'deleteTask'
   },
 
   addTask: function() {

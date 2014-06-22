@@ -3,4 +3,4 @@ var Task = Backbone.Model.extend({
     name: 'Untitled Task',
     done: false
   }
-})
+});
