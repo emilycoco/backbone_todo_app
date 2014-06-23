@@ -1,7 +1,7 @@
 var TaskView = Backbone.View.extend({
   tagName: 'li',
 
-  template: _.template('<span><%= name %></span><input type="button" class="delete" value="X"></input>'),
+  template: _.template('<span><%= name %></span><input type="button"  class="button delete" value="X"></input>'),
 
   initialize: function() {
     this.model.on('destroy', this.render, this);

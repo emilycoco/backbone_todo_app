@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
+  <header>
+      <link rel="stylesheet" type="text/css" href="assets/style.css" />
+  </header>
   <body>
-    <header>
-      <h1>Todo List</h1>
-    </header>
-
-    <footer>
-    </footer>
+    <div class="container">
+      <header>
+        <h1>Todo List</h1>
+      </header>
+      <div class="contents">
+      </div>
+      <footer>
+      </footer>
+    </div>
     <script src="bower_components/jquery/jquery.min.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
     <script src="bower_components/backbone/backbone.js"></script>
@@ -21,8 +27,7 @@
       $(function(){
         var app = new App({});
         var appview = new AppView({model: app});
-        $('body').append(appview.render());
-        app.set({list: new List([{name: 'get a job'}])});
+        $('.contents').append(appview.render());
       });
     </script>
   </body>

@@ -1,7 +1,7 @@
 var AppView = Backbone.View.extend({
   tagName: 'div',
 
-  template: _.template('<span><label for="new-task">Add a Task: </label><input type="text" id="new-task"></input></span><input type="button" id="add-task" value="add task"></input>'),
+  template: _.template('<div class="input-container cf"><span><input type="text" id="new-task"></input></span><input type="button" class="button" id="add-task" value="add task"></input></div>'),
 
   initialize: function() {
     this.model.on('change', this.render, this);
